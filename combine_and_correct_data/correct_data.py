@@ -18,7 +18,12 @@ def drop_a():
 
     file.to_csv(file_name,index=False)
 
-replace_to_comma("../dataset/Team Tosca/E_2019_08_23__13_50_24.csv")
+# replace_to_comma("../dataset/Team Tosca/E_2019_08_23__13_50_24.csv")
 
 
 #Add a team column
+
+file = pd.read_csv("../dataset/Team Toccata/E_2019_03_18__07_11_07.csv")
+
+file.insert(4,"Team", "Team Toccata")
+file.to_csv("E_2019_03_18__07_11_07.csv", index=False)
